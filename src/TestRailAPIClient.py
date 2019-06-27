@@ -29,7 +29,7 @@ class TestRailAPIClient(object):
             _project_id - ID of the test project to create a run under, required if creating a new run.\n
             _suite_id_ - ID of the test suite to create a test run for, required if creating a new run.
         """
-        if hosted:
+        if hosted == "yes":
             self._url = '{protocol}://{server}/index.php?/api/v2/'.format(protocol=protocol, server=server)
         else:
             self._url = '{protocol}://{server}/testrail/index.php?/api/v2/'.format(protocol=protocol, server=server)
